@@ -1,10 +1,10 @@
 var assert = require('assert');
 var _ = require('underscore');
 
-var Openpay = require('../lib/openpay');
+var BbvaApi = require('../lib/BbvaAPI');
 /*Sandbox*/
-var openpay = new Openpay('m1qp3av1ymcfufkuuoah', '***REMOVED***');
-openpay.setTimeout(30000);
+var bbva = new BbvaApi('mwsz37ilxhx1ejjlxfme', 'sk_736dff4696b240f6b9351a75e797a6c0', "138.85.61.94");
+bbva.setTimeout(30000);
 var enableLogging = true;
 
 describe('Get cards list with creation[lte] filter', function () {
@@ -14,7 +14,7 @@ describe('Get cards list with creation[lte] filter', function () {
             'creation[gte]': '2021-01-01',
             'limit': 1
         };
-        openpay.cards.list(searchParams, function (error, body, response) {
+        bbva.cards.list(searchParams, function (error, body, response) {
             printLog(response.statusCode, body, error);
             assert.equal(response.statusCode, 200, '');
             done();
