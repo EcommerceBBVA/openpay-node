@@ -5,7 +5,7 @@ var urllib = require('urllib');
 
 var Openpay = require('../lib/openpay');
 /*Sandbox*/
-var openpay = new Openpay('gdntnaxvkcdviesgaxem', '***REMOVED***');
+var openpay = new Openpay('gdntnaxvkcdviesgaxem', 'sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 openpay.setTimeout(10000);
 
 var enableLogging = true;

@@ -2,7 +2,7 @@ var assert = require('assert');
 var _ = require('underscore');
 var Openpay = require('../lib/openpay');
 /*Sandbox*/
-var openpay = new Openpay('m1qp3av1ymcfufkuuoah', '***REMOVED***');
+var openpay = new Openpay('m1qp3av1ymcfufkuuoah', 'sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 openpay.setTimeout(30000);
 var enableLogging = true;
 var testCreateCustomer = {
